@@ -7,6 +7,25 @@ the 1st run is always correct, so it's the pattern that you should see every tim
 After 2 or three back and forth, the textures get mixed up,
 Eventually, it might crash :(
 
+Also note that you'll get 2 warnings:
+
+    warning: unused variable: `texture_loader`
+    --> src\states\main_menu_state.rs:16:16
+    |
+    16 |     pub fn new(texture_loader: TextureLoader) -> Self {
+    |                ^^^^^^^^^^^^^^ help: consider prefixing with an underscore: `_texture_loader`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+    warning: unused variable: `texture_loader`
+    --> src\states\game_state.rs:57:16
+    |
+    57 |     pub fn new(texture_loader: TextureLoader) -> Self {
+    |   
+
+This is the "fix" I came up with. Basically if you pass the texture loader from states to states, then it's never reloaded and everything works fine.
+It's definitely a work around, but eventually i dont want to load all the assets if i dont need them..
+
 If you could run this app and help me figure out what's going on, I would really appreciate.
 thanks a lot in advance!
 
