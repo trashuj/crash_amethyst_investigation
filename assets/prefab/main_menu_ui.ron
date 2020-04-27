@@ -1,0 +1,55 @@
+#![enable(implicit_some)]
+Container(
+    transform: (
+        id: "background",
+        anchor: Middle,
+        stretch: XY( x_margin: 0., y_margin: 0., keep_aspect_ratio: false),
+        width: 20.,
+        height: 20.,
+    ),
+    //background: SolidColor(0.6, 0.6, 1.0, 0.8),
+    children: [
+        Label(
+            transform: (
+                id: "title",
+                x: 0.,
+                y: -120,
+                width: 1440.,
+                height: 200.,
+                tab_order: 2,
+                anchor: TopMiddle,
+                transparent: false,
+            ),
+            text: (
+                text: "Keep clicking :)",
+                font: File("font/amaticSC.ttf", ("TTF", ())),
+                font_size: 120.,
+                color: (1.0, 1.0, 1.0, 1.0),
+            )
+        ),
+        Button(
+            transform: (
+                id: "join",
+                x: -200.,
+                y: -100.,
+                width: 256.,
+                height: 80.,
+                tab_order: 9,
+                anchor: TopRight,
+                mouse_reactive: true,
+            ),
+            button: (
+                text: "Join game",
+                font: File("font/amaticSC.ttf", ("TTF", ())),
+                font_size: 80.,
+                normal_text_color: (0.0, 0.0, 0.0, 1.0),
+                // hover_text_color: (0.4, 0.4, 1.0, 1.0),
+                press_text_color: (0.6, 0.6, 1.0, 1.0),
+                normal_image: SolidColor(0.75, 0.5, 0.1, 1.0),
+                // hover_image: SolidColor(0.3, 1., 0.3, 1.),
+                press_image: SolidColor(1.0, 1.0, 0.15, 1.),
+            )
+        ),
+        
+    ],
+)

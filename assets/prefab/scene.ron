@@ -1,0 +1,206 @@
+#![enable(implicit_some)]
+
+Prefab (
+    entities: [
+        (
+            data: (
+                light: (ambient_color: ((0.3, 0.3, 0.3, 1.0))),
+            ),
+        ),
+        // (
+        //     data: (
+        //         graphics: (
+        //             mesh: Asset(File("mesh/rectangle.obj", ("OBJ", ()))),
+        //             material: (
+        //                 albedo: File("texture/grass.png", (
+        //                     "IMAGE", (
+        //                         sampler_info: (
+        //                             min_filter: Linear,
+        //                             mag_filter: Linear,
+        //                             mip_filter: Linear,
+        //                             wrap_mode: (Tile, Tile, Tile),
+        //                             lod_bias: (0),
+        //                             lod_range: (
+        //                                 start: ( 0 ),
+        //                                 end: ( 8000 ),
+        //                             ),
+        //                             comparison: None,
+        //                             border: (0),
+        //                             normalized: true,
+        //                             anisotropic: On(8),
+        //                         ),
+        //                     )
+        //                 )),
+        //             ),
+        //         ),
+        //         transform: (
+        //             translation: (0.0, 0.0, 0.0),
+        //             scale: (0.5, 1.0, 0.5),
+        //         ),
+        //     ),
+        // ),(
+        //     data: (
+        //         graphics: (
+        //             mesh: Asset(File("mesh/rectangle.obj", ("OBJ", ()))),
+        //             material: (
+        //                 albedo: File("texture/grass.png", (
+        //                     "IMAGE", (
+        //                         sampler_info: (
+        //                             min_filter: Linear,
+        //                             mag_filter: Linear,
+        //                             mip_filter: Linear,
+        //                             wrap_mode: (Tile, Tile, Tile),
+        //                             lod_bias: (0),
+        //                             lod_range: (
+        //                                 start: ( 0 ),
+        //                                 end: ( 8000 ),
+        //                             ),
+        //                             comparison: None,
+        //                             border: (0),
+        //                             normalized: true,
+        //                             anisotropic: On(8),
+        //                         ),
+        //                     )
+        //                 )),
+        //             ),
+        //         ),
+        //         transform: (
+        //             translation: (1.0, 0.0, 0.0),
+        //             scale: (0.5, 1.0, 0.5),
+                    
+        //         ),
+        //     ),
+        // ),
+        // (
+        //     data: (
+        //         graphics: (
+        //             mesh: Asset(File("mesh/rectangle.obj", ("OBJ", ()))),
+        //             material: (
+        //                 albedo: File("texture/stone.png", (
+        //                     "IMAGE", (
+        //                         sampler_info: (
+        //                             min_filter: Linear,
+        //                             mag_filter: Linear,
+        //                             mip_filter: Linear,
+        //                             wrap_mode: (Tile, Tile, Tile),
+        //                             lod_bias: (0),
+        //                             lod_range: (
+        //                                 start: ( 0 ),
+        //                                 end: ( 8000 ),
+        //                             ),
+        //                             comparison: None,
+        //                             border: (0),
+        //                             normalized: true,
+        //                             anisotropic: On(8),
+        //                         ),
+        //                     )
+        //                 )),
+        //             ),
+        //         ),
+        //         transform: (
+        //             translation: (0.0, 0.0, 1.0),
+        //             scale: (0.5, 1.0, 0.5),
+                    
+        //         ),
+        //     ),
+        // ),
+        // (
+        //     data: (
+        //         graphics: (
+        //             mesh: Asset(File("mesh/rectangle.obj", ("OBJ", ()))),
+        //             material: (
+        //                 albedo: File("texture/stone.png", (
+        //                     "IMAGE", (
+        //                         sampler_info: (
+        //                             min_filter: Linear,
+        //                             mag_filter: Linear,
+        //                             mip_filter: Linear,
+        //                             wrap_mode: (Tile, Tile, Tile),
+        //                             lod_bias: (0),
+        //                             lod_range: (
+        //                                 start: ( 0 ),
+        //                                 end: ( 8000 ),
+        //                             ),
+        //                             comparison: None,
+        //                             border: (0),
+        //                             normalized: true,
+        //                             anisotropic: On(8),
+        //                         ),
+        //                     )
+        //                 )),
+        //             ),
+        //         ),
+        //         transform: (
+        //             translation: (1.0, 0.0, 1.0),
+        //             scale: (0.5, 1.0, 0.5),
+                    
+        //         ),
+        //     ),
+        // ),
+        // (
+        //     data: (
+        //         graphics: (
+        //             mesh: Asset(File("mesh/rectangle.obj", ("OBJ", ()))),
+        //             material: (
+        //                 albedo: File("texture/circle.png", (
+        //                     "IMAGE", (
+        //                         sampler_info: (
+        //                             min_filter: Linear,
+        //                             mag_filter: Linear,
+        //                             mip_filter: Linear,
+        //                             wrap_mode: (Tile, Tile, Tile),
+        //                             lod_bias: (0),
+        //                             lod_range: (
+        //                                 start: ( 0 ),
+        //                                 end: ( 8000 ),
+        //                             ),
+        //                             comparison: None,
+        //                             border: (0),
+        //                             normalized: true,
+        //                             anisotropic: On(8),
+        //                         ),
+        //                     )
+        //                 )),
+        //             ),
+        //         ),
+        //         transform: (
+        //             translation: (0.0, 0.0, 2.0),
+        //             scale: (0.5, 1.0, 0.5),
+                    
+        //         ),
+        //     ),
+        // ),
+        // (
+        //     data: (
+        //         graphics: (
+        //             mesh: Asset(File("mesh/rectangle.obj", ("OBJ", ()))),
+        //             material: (
+        //                 albedo: File("texture/ragnar.png", (
+        //                     "IMAGE", (
+        //                         sampler_info: (
+        //                             min_filter: Linear,
+        //                             mag_filter: Linear,
+        //                             mip_filter: Linear,
+        //                             wrap_mode: (Tile, Tile, Tile),
+        //                             lod_bias: (0),
+        //                             lod_range: (
+        //                                 start: ( 0 ),
+        //                                 end: ( 8000 ),
+        //                             ),
+        //                             comparison: None,
+        //                             border: (0),
+        //                             normalized: true,
+        //                             anisotropic: On(8),
+        //                         ),
+        //                     )
+        //                 )),
+        //             ),
+        //         ),
+        //         transform: (
+        //             translation: (0.0, 0.001, 2.0),
+        //             scale: (0.4, 1.0, 0.4),
+        //         ),
+        //     ),
+        // ),
+    ],
+)

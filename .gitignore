@@ -1,0 +1,11 @@
+# Unwanted files
+target
+cargo.lock
+Cargo.lock
+
+# Backup files
+.DS_Store
+thumbs.db
+*~
+*.rs.bk
+*.swp
