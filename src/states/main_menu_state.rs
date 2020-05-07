@@ -6,25 +6,18 @@ use amethyst::{
 };
 
 use crate::states;
-use crate::texture_loader::*;
 
-pub struct MainMenuState {
-    texture_loader: TextureLoader,
-}
+pub struct MainMenuState {}
 
 impl MainMenuState {
-    pub fn new(texture_loader: TextureLoader) -> Self {
-        Self {
-            texture_loader: TextureLoader::new(),
-        }
+    pub fn new() -> Self {
+        Self {}
     }
 }
 
 impl SimpleState for MainMenuState {
     fn on_start(&mut self, state_data: StateData<'_, GameData<'_, '_>>) {
         let StateData { world, .. } = state_data;
-
-        self.texture_loader.init(world);
 
         world.exec(|mut creator: UiCreator<'_>| {
             creator.create("prefab/main_menu_ui.ron", ());
@@ -64,9 +57,7 @@ impl SimpleState for MainMenuState {
 
                 if Some(target) == join_button {
                     world.delete_all();
-                    return Trans::Switch(Box::new(states::GameState::new(
-                        self.texture_loader.clone(),
-                    )));
+                    return Trans::Switch(Box::new(states::GameState::new()));
                 }
 
                 Trans::None

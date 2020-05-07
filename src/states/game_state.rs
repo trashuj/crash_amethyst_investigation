@@ -54,7 +54,7 @@ pub struct GameState {
 }
 
 impl GameState {
-    pub fn new(texture_loader: TextureLoader) -> Self {
+    pub fn new() -> Self {
         Self {
             grid: None,
             texture_loader: TextureLoader::new(),
@@ -137,9 +137,7 @@ impl SimpleState for GameState {
 
                 if Some(target) == exit_button {
                     world.delete_all();
-                    return Trans::Switch(Box::new(MainMenuState::new(
-                        self.texture_loader.clone(),
-                    )));
+                    return Trans::Switch(Box::new(MainMenuState::new()));
                 }
                 Trans::None
             }

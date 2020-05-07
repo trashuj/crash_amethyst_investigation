@@ -61,11 +61,7 @@ fn main() -> amethyst::Result<()> {
         )?;
 
     //let mut game = Application::new(assets_dir, states::MainMenuState::new(), game_data)?;
-    let mut game = Application::new(
-        assets_dir,
-        states::GameState::new(texture_loader::TextureLoader::new()),
-        game_data,
-    )?;
+    let mut game = Application::new(assets_dir, states::GameState::new(), game_data)?;
     game.run();
 
     Ok(())
