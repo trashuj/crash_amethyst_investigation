@@ -84,7 +84,7 @@ impl<'s> System<'s> for CameraSystem {
                     // wheel value is -1, 0, or 1
                     if wheel != 0.0 {
                         //transform.move_forward(wheel);
-                        let ray = camera.projection().screen_ray(
+                        let ray = camera.screen_ray(
                             Point2::new(x, y),
                             Vector2::new(screen_dimensions.width(), screen_dimensions.height()),
                             transform,
